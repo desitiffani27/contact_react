@@ -4,7 +4,6 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import {ROUTE_NAMES} from '../utils/CONSTANTS';
 
-import OnboardingIntro from '../components/screens/onboarding-intro';
 import ContactList from '../components/screens/contact/index';
 import ContactForm from '../components/screens/contact/screens/ContactForm';
 import {
@@ -35,11 +34,6 @@ function AuthStack(isFirstTime) {
             options={({route, navigation}) =>
               setDefaultHeaderLayout(navigation, route.params !=  null ? 'Edit Contact' : 'New Contact', 'CircularStd-Book', 20)
             }
-          />
-        
-          <Stack.Screen
-            name={ROUTE_NAMES.ONBOARDING_INTRO}
-            component={OnboardingIntro}
           />
       </Stack.Navigator>
     </NavigationContainer>
